@@ -12,8 +12,8 @@
     <!-- jQueryライブラリ -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <!-- cssシート -->
-    <link href="{{ asset('css/emisai.css') }}" rel="stylesheet">
-    <!-- <link href="{{ secure_asset('css/emisai.css') }}" rel="stylesheet"> -->
+    <!-- <link href="{{ asset('css/emisai.css') }}" rel="stylesheet"> -->
+    <link href="{{ secure_asset('css/emisai.css') }}" rel="stylesheet">
     <title>@yield('title')</title>
 </head>
 <body>
