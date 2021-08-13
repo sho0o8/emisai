@@ -1,0 +1,315 @@
+@charset "utf-8";
+/* 全共通 */
+body {
+  background-color: #fffeed;
+  color: #636b6f;
+  font-size: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #636b6f;
+}
+/* ヘッダー */
+header{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+.header_right{
+  float: right;
+}
+.header_ul{
+  display: flex;
+}
+.header_li{
+  padding: 0 15px;
+}
+/* ホーム */
+.main{
+  padding-top: 90px;
+}
+.main_content{
+  width: 90%;
+  margin: 0 0 0 auto;
+  position:relative;
+}
+.slider {
+  position:relative;
+  z-index: 1;
+  /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+  opacity: 0.5;
+}
+/*　背景画像設定　*/
+.slider-item01 {
+  background:url(../images/emisai1.jpg);
+}
+.slider-item02 {
+  background:url(../images/emisai2.jpg);
+}
+.slider-item03 {
+  background:url(../images/emisai3.jpg);
+}
+.slider-item04 {
+  background:url(../images/emisai4.jpg);
+}
+.slider-item05 {
+  background:url(../images/emisai5.jpg);
+}
+.slider-item {
+  width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height:85vh;
+  /* 各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする */
+  background-repeat: no-repeat;/*背景画像をリピートしない*/
+  background-position: center;/*背景画像の位置を中央に*/
+  background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+  border-bottom-left-radius: 100px;
+  -webkit-border-bottom-left-radius: 100px;
+  -moz-border-radius-bottomleft: 100px;
+}
+/*ドットナビゲーションの設定*/
+.slick-dots {
+  position: relative;
+  z-index: 3;
+  text-align:center;
+  margin:-50px 0 0 0;
+}
+.slick-dots li {
+  display:inline-block;
+  margin:0 5px;
+}
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width:8px;/*ドットボタンのサイズ*/
+  height:8px;/*ドットボタンのサイズ*/
+  display:block;
+  border-radius:50%;
+  background:#ccc;/*ドットボタンの色*/
+}
+.slick-dots .slick-active button{
+  background:#333;/*ドットボタンの現在地表示の色*/
+}
+.emisai_name{
+  position: absolute;
+  text-align: center;
+  line-height: 10px;
+  padding: 15px;
+  border: solid 3px #636b6f;
+  top: 400px;
+  left: 300px;
+  z-index: 10;
+}
+.emisai_name h1{
+  font-size: 150px;
+  letter-spacing: 10px;
+  font-family: 'Hi Melody', cursive;
+}
+.logo img{
+  position: absolute;
+  top: 900px;
+  left: 0px;
+  z-index: 10;
+  border-radius: 100%;
+  width: 200px;
+}
+/* Emisaiについて */
+.about{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 120px;
+}
+.about_title{
+  position: relative;
+  display: inline-block;
+}
+.about_title h2{
+  letter-spacing: 5px;
+  border-bottom: solid 3px #636b6f;
+}
+.title_background{
+  position: absolute;
+  top: -50px;
+  left:-10px;
+  z-index: 1;
+  margin: 0 auto;
+  font-size: 100px;
+  letter-spacing: 20px;
+  font-weight: bold;
+  opacity: 0.2; 
+}
+.about_pic{
+  opacity: 0.8;
+}
+.about_pic img{
+  width: 800px;
+  height: 450px;
+}
+.about_content{
+  padding-top: 30px;
+  text-align: left;
+}
+.about_table{
+  padding: 20px 85px;
+  border: solid 3px #636b6f;
+  margin: auto;
+  border-spacing: 0px 25px;
+}
+.about_th,.about_td{
+  padding: 0 20px;
+}
+
+/* 特徴 */
+.point{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 120px;
+}
+.point_title{
+  position: relative;
+  display: inline-block;
+}
+.point_title h2{
+  letter-spacing: 5px;
+  border-bottom: solid 3px #636b6f;
+}
+.point_main{
+  display: flex;
+  justify-content: center;
+}
+.point_content{
+  padding-top: 30px;
+  width: 400px;
+}
+.point02, .point04{
+  margin-top: 250px;
+}
+.point_content_title h1{
+  font-weight: 1000;
+  margin: 0 auto;
+}
+.point_content_title h3{
+  font-size: 32px;
+  margin: 0 auto;
+}
+.point_content_title p{
+  font-size: 18px;
+}
+.point_pic img{
+  width:300px;
+	height:300px;
+	object-fit:cover;
+	border-radius:50%;
+  opacity: 0.8;
+}
+.beer_pic img{
+  object-position: -160px 0px;
+}
+/* 店内の雰囲気 */
+.seat{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 120px;
+  text-align: center;
+}
+.seat_title{
+  position: relative;
+  display: inline-block;
+}
+.seat_title h2{
+  letter-spacing: 5px;
+  border-bottom: solid 3px #636b6f;
+}
+.title_background{
+  position: absolute;
+  top: -50px;
+  left:-10px;
+  z-index: 1;
+  margin: 0 auto;
+  font-size: 100px;
+  letter-spacing: 20px;
+  font-weight: bold;
+  opacity: 0.2; 
+}
+.table_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+.table_title,.counter_title{
+  margin: 0 95px;
+  width: 250px;
+  border: solid 3px #636b6f;
+}
+.table_title h2{
+  vertical-align:  middle;
+}
+
+.table_title h2,.counter_title h2{
+  font-size: 48px;
+  margin: 0 auto;
+}
+.table_title p,.counter_title p{
+  font-size: 20px;
+  margin: 0 auto;
+}
+.counter_content{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.table_pic img,.counter_pic img{
+  opacity: 0.8;
+  border-radius: 10px;
+  margin: 0 20px;
+  width: 400px;
+}
+/* アクセス */
+.access{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 120px;
+}
+.access_title{
+  position: relative;
+  display: inline-block;
+}
+.access_title h2{
+  letter-spacing: 5px;
+  border-bottom: solid 3px #636b6f;
+}
+.access_content{
+  padding-top: 30px;
+  text-align: left;
+}
+.access_main{
+  padding: 20px 85px;
+  border: solid 3px #636b6f;
+  margin: auto;
+  border-spacing: 0px 25px;
+}
+.access_td,.access_th{
+  padding: 0 20px;
+}
+/* フッター */
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%; 
+  padding-top: 30px;
+  text-align: center;
+  font-size: 18px;
+}
